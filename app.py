@@ -25,7 +25,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 app.add(args.pdf_path, data_type="pdf_file")
-in_query = f"Create {args.number_of_questions} quizz questions with 4 choices and correct answer about {args.topic}"
+in_query = f"Create {args.number_of_questions} quizz questions with 4 choices(a,b,c,d) and answer about {args.topic}"
 print(in_query)
 response = app.query(in_query)
 
