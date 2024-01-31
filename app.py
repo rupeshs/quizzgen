@@ -1,18 +1,36 @@
 import os
 from embedchain import App
+from argparse import ArgumentParser
 
-
-os.environ["GOOGLE_API_KEY"] = "AIzaSyB_Wf8VWRPNMp6KTaR_0T0rxEmAEyObEkU"
+os.environ["GOOGLE_API_KEY"] = ""
 
 app = App.from_config(config_path="config.yaml")
 
-app.add(r"C:\Users\Rupesh\Downloads\test.pdf", data_type="pdf_file")
+parser = ArgumentParser(description="QuizzGen")
 
-response = app.query(
-    "create 2 quizz questions with 4 choices and correct answer about Adapter Pattern"
+parser.add_argument("--pdf_path", type=str, help="Path of pdf file", required=True)
+
+parser.add_argument(
+    "--topic",
+    type=str,
+    help="Name of the topic you want to generate questions",
+    required=True,
 )
-# response = app.query("create a list of topics")
-if app.llm.config.stream:  # if stream is enabled, response is a generator
+
+parser.add_argument(
+    "--number_of_questions",
+    type=int,
+    help="Number of questions to generate, default 1",
+    default=1,
+)
+args = parser.parse_args()
+
+app.add(args.pdf_path, data_type="pdf_file")
+in_query = f"Create {args.number_of_questions} quizz questions with 4 choices and correct answer about {args.topic}"
+print(in_query)
+response = app.query(in_query)
+
+if app.llm.config.stream:  #
     for chunk in response:
         print(chunk)
 else:
