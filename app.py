@@ -2,7 +2,6 @@ import os
 from embedchain import App
 from argparse import ArgumentParser
 
-os.environ["GOOGLE_API_KEY"] = ""
 
 app = App.from_config(config_path="config.yaml")
 

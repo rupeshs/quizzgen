@@ -7,3 +7,7 @@ Create quizz questions from PDF.
 ## Google Gemini API key
 
 Get your Google Gemini API key from [here](https://makersuite.google.com/app/apikey)
+
+`export GOOGLE_API_KEY=<your-api-key>`
+
+`set GOOGLE_API_KEY=<your-api-key>`
