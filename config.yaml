@@ -4,7 +4,7 @@ llm:
     model: gemini-pro
     temperature: 0.1
     top_p: 1
-    stream: false
+    stream: true
 
 embedder:
   provider: google

@@ -4,8 +4,8 @@ from typing import Any
 app = App.from_config(config_path="config.yaml")
 
 
-def add_pdf(filepath: str):
-    app.add(filepath, data_type="pdf_file")
+def add_file(filepath: str):
+    app.add(filepath)
 
 
 def generate_questions(

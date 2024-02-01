@@ -1,6 +1,6 @@
 # QuizzGen
 
-Creates Quiz question from PDF files, you can ask topics within in the PDF file.
+Creates Quiz question from PDF/text files, you can ask topics within in the input file.
 
 `python app.py --pdf_path "C:\Users\Rupesh\Downloads\test.pdf"`
 
