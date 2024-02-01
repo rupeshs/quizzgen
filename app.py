@@ -35,8 +35,11 @@ def print_message(response: str):
 while True:
     print()
     topic = input(">> ")
+
     if topic == "exit":
         break
+    if topic == "":
+        continue
 
     for index in range(args.max_questions):
         question_count = args.max_questions - index

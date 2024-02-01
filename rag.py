@@ -12,8 +12,8 @@ def generate_questions(
     num_questions: int,
     topic: str,
 ) -> Any:
-    in_query = f"""Create {num_questions} quizz questions with 4 choices(a,b,c,d) and 
-                   answer about {topic},avoid markup format, if you dont know reply Sorry,I don't know"""
+    in_query = f"""Create {num_questions} quiz questions with 4 choices(a,b,c,d) and answer about {topic},avoid markup format,if you dont know reply Sorry,I don't know"""
+    print(in_query)
     response = app.query(in_query)
     return response
 
