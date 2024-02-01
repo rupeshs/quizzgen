@@ -1,8 +1,8 @@
 # QuizzGen
 
-Create quizz questions from PDF.
+Creates Quiz question from PDF files, you can ask topics within in the PDF file.
 
-`python app.py --pdf_path "C:\Users\Rupesh\Downloads\test.pdf" --number_of_questions 3 --topic "singleton pattern"`
+`python app.py --pdf_path "C:\Users\Rupesh\Downloads\test.pdf"`
 
 ## Google Gemini API key
 
