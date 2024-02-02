@@ -45,7 +45,9 @@ while True:
         question_count = args.max_questions - index
         response = generate_questions(question_count, topic)
         if "Sorry" in response:
-            print_message(f"Failed generate {question_count} questions about {topic}!")
+            print_message(
+                f"Failed to generate {question_count} questions about {topic}!"
+            )
             print()
             continue
         else:
